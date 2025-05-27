@@ -6,8 +6,9 @@ def multiply(num1,num2):
     return num1*num2
 def divide(num1,num2):
     if num2 == 0:
-        print("Error! cannot divide with Zero ")      #Handle division by zero with appropriate error messages
-    return num1/num2
+        print("Error! cannot divide with Zero")            #Handle division by zero with appropriate error messages
+        return None
+     return num1/num2
 
 while True:           # Calculator for Meun Loop
     print("---Simple Calculator---")
@@ -35,4 +36,8 @@ while True:           # Calculator for Meun Loop
     elif choice == 3:
         print(f"Multiply of two number: {num1*num2}")
     elif choice == 4:
-        print(f"Divide of two number: {num1/num2}")
+        result = divide(num1, num2)
+        if result is not None:
+            print(f"Divide of two number: {result}")
+    else:
+        print("Invalid Choice. Please choose from 1 to 5.")
